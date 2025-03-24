@@ -5,9 +5,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Globe } from "lucide-react"
 import CursorFollower from "./cursor-follower"
-import AnimatedText from "./animated-text"
 import Logo from "@/public/images/main-logo.png"
 import DrawerHeader from "./drawer-header"
+import AnimatedText from "./animated-text"
 // import CursorFollower from "@/components/cursor-follower"
 
 export default function Hero() {
