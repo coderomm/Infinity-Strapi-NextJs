@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import BlogPostImg from '@/public/images/BlogPost.png'
+import { Button } from "./ui/button"
 
 export default function BlogSection() {
     const blogPosts = [
@@ -31,17 +32,14 @@ export default function BlogSection() {
     ]
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-12">
-                DO YOU WRITE BLOGS
-                <br className="hidden sm:block" /> OR DO PODCASTS?
-            </h1>
+        <section className="bg-[#FAFAFA] w-full max-w-[1440px] mx-auto px-4 py-16 sm:px-6 lg:px-8 xl:px-[100px]">
+            <h2 className="text-[#141219] font-bold text-2xl lg:text-5xl lg:max-w-[620px] mb-[30px] lg:mb-[60px]">DO YOU WRITE BLOGS OR DO PODCASTS?</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[26px] lg:px-[66px]">
                 {blogPosts.map((post) => (
                     <Link href="#" key={post.id} className="group">
-                        <div className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform duration-300 hover:shadow-md hover:-translate-y-1">
-                            <div className="relative h-56 w-full overflow-hidden rounded-t-lg">
+                        <div className="bg-white p-3 lg:p-6 rounded-3xl blog-card-shadow overflow-hidden transition-transform duration-300 hover:shadow-md hover:-translate-y-1 flex flex-col items-start gap-6">
+                            <div className="relative w-full h-[242px] overflow-hidden rounded-2xl blog-img-shadow">
                                 <Image
                                     src={post.image || "/placeholder.svg"}
                                     alt={post.title}
@@ -50,15 +48,16 @@ export default function BlogSection() {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             </div>
-                            <div className="p-6">
-                                <span className="inline-block text-purple-600 text-sm font-medium mb-2">{post.category}</span>
-                                <h2 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                            <div className="flex flex-col items-start gap-4">
+                                <span className="bg-[#F5F2FF] text-[#5D38DE] text-sm font-bold py-2 px-[20px] flex items-center justify-center rounded-[40px]">{post.category}</span>
+                                <h2 className="text-[18px] font-bold text-[#141219] mb-4 group-hover:text-purple-600 transition-colors">
                                     {post.title}
                                 </h2>
-                                <div className="flex items-center text-sm text-gray-500">
-                                    <span>{post.date}</span>
-                                    <span className="mx-2">|</span>
-                                    <span>{post.readTime}</span>
+                                <div className="w-full h-[1px] bg-[#0000001A] block"></div>
+                                <div className="flex items-center gap-3">
+                                    <span className="text-[#141219] font-normal text-base">{post.date}</span>
+                                    <span className="text-[#00000099]">|</span>
+                                    <span className="text-[#141219] font-normal text-base">{post.readTime}</span>
                                 </div>
                             </div>
                         </div>
@@ -67,10 +66,8 @@ export default function BlogSection() {
             </div>
 
             <div className="flex justify-center mt-12">
-                <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-8 rounded-full transition-colors">
-                    See all
-                </button>
+                <Button className="bg-brand-red hover:bg-red-600 text-white font-bold text-base lg:text-[18px] py-2 px-8 lg:px-8 lg:py-4 rounded-full transition-colors">See all</Button>
             </div>
-        </div>
+        </section>
     )
 }

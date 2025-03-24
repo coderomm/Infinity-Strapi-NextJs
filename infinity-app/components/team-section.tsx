@@ -9,10 +9,10 @@ export default function TeamSection() {
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 xl:py-6">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-xl">
-                        SHOULD I SHOW YOU WHAT <span className="text-brand-red">PRODUCTS</span> I&apos;VE BUILT?
+                        SHOULD I SHOW YOU WHAT <span className="text-[var(--brand-red)]">PRODUCTS</span> I&apos;VE BUILT?
                     </h2>
                     <div className="mt-4 md:mt-0 flex items-center">
-                        <span className="font-handwriting text-lg md:text-xl text-brand-red">Of course, Why not?</span>
+                        <span className="font-handwriting text-lg md:text-xl text-[var(--brand-red)]">Of course, Why not?</span>
                         <BendArrowDown />
                     </div>
                 </div>
