@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.Team-Card-Shadow {
+  background: linear-gradient(180deg, rgba(25, 24, 24, 0) 0%, #191818 100%);
+}
