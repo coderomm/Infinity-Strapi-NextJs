@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BrandLogo from '@/public/images/main-logo.png'
+import BrandLogo from '@/public/images/Brand Logo.png'
 import { Facebook, Instagram, Linkedin, Map, PhoneCall, Twitter } from "lucide-react";
 import Link from "next/link";
 
@@ -26,7 +26,7 @@ export function Footer() {
                                 <div className="flex items-center justify-center rounded-[60px] text-white border-brand-dark w-[56px] h-[56px]">
                                     <PhoneCall className="w-[16px] h-[18px]" />
                                 </div>
-                                <p className="font-normal text-[18px] text-white">+91 6292226351</p>
+                                <p className="font-normal text-[18px] text-white"><a href="telto:+916292226351">+91 6292226351</a></p>
                             </div>
                         </div>
                         <div className="socials flex items-center justify-start md:gap-6">
@@ -51,9 +51,9 @@ export function Footer() {
                 <div className="hr bg-white w-full h-[1px]"></div>
                 <div className="flex items-center justify-start gap-5 xl:gap-10">
                     <Link href="#" className="text-white text-[18px]">Home</Link>
-                    <Link href="#" className="text-white text-[18px]">Home</Link>
-                    <Link href="#" className="text-white text-[18px]">Home</Link>
-                    <Link href="#" className="text-white text-[18px]">Home</Link>
+                    <Link href="#" className="text-white text-[18px]">Features</Link>
+                    <Link href="#" className="text-white text-[18px]">Blogs</Link>
+                    <Link href="#" className="text-white text-[18px]">Pricing</Link>
                 </div>
             </div>
         </footer>
